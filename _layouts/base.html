@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>{% if page.title %} {{ page.title }} - {% endif %} {{ site.name }} </title>
+
+<meta name="author"       content="{{ site.name }}" />
+<meta name="description"  content="{{ site.description }}" />
+
+<link rel="alternate"       type="application/rss+xml" href="/atom.xml" />
+<link rel="stylesheet"      type="text/css"   href="/css/reset.css" media="screen">
+<link rel="stylesheet"      type="text/css"   href="/css/fonts.css" media="screen">
+<link rel="stylesheet"      type="text/css"   href="/css/syntax.css" >
+<link rel="stylesheet/less" type="text/css"   href="/css/styles.less" media="screen">
+
+<!--[if IE 7]><link rel="stylesheet" href="css/ie/ie7.css" type="text/css" media="screen"><![endif]-->
+<!--[if lt IE 7]><link rel="stylesheet" href="css/ie/ie6.css" type="text/css" media="screen"><![endif]-->
+
+<link rel="stylesheet/less" type="text/css"   href="/css/phone.less" media="only screen and (max-device-width: 480px)" />
+<link rel="stylesheet/less" type="text/css"   href="/css/phone.less" media="only screen and (device-width: 768px)" />
+<link rel="icon"            type="image/ico"  href="/imgs/favicon.ico">
+
+<script type="text/javascript" src="/js/html5.js"></script>
+<script type="text/javascript" src="/js/less.js"></script>
+<script type="text/javascript" src="/js/custom.js"></script>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+</head>
+
+<body>
+<header></header>
+{% include navigation.html %}
+<h1 id="site_title"><a href="/"> {{site.title}} </a></h1>
+{{content}}
+<footer></footer>
+</body>
+</html>

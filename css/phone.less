@@ -1,0 +1,60 @@
+@charset "UTF-8";
+@import "fonts";
+
+@background-color:  #fff;
+@text-color:        #333;
+@link-color:        #f00;
+@vlink-color:       #f00;
+@hlink-color:       #f00;
+
+::selection {}
+
+body {
+  background-color: @background-color;
+  color: @text-color;
+  font-family: 'Open Sans', Helvetica, sans-serif; line-height: 175%; text-align: justify; font-weight:100;
+
+  a {color: @link-color;}
+  a:hover {color: @hlink-color;}
+  a:active, a:visited {color: @vlink-color;}
+  h1#site_title { margin-top: 100px;}
+  h1 {
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  nav {
+
+    line-height:3.0em;
+    padding: 5px auto;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    font-size: 25px;
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 13px rgba(200,200,0,0.2);
+    -moz-box-shadow: 0 1px 13px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 13px rgba(100,100,0,0.2);
+    color: #fff;
+     
+       ul {
+         float: right; margin-right: 8%;
+         li{display: inline;}
+    }
+  }
+
+  article {
+    header {
+      h1#post_title {}
+      time {}
+    }
+    
+    section {
+      #post_image {}
+      #post_content {}
+    }
+  }
+  
+  footer {}
+}

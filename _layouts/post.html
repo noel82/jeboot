@@ -1,0 +1,19 @@
+---
+layout: base
+---
+<article>
+  <header>
+    <h1 id="post_title"> {{ page.title }}</h1>
+    <time datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>
+      <a href="/" class="back_link">&laquo;</a> {{ page.date | date: '%B %d, %Y' }}
+    </time>
+  </header>
+
+  <section>
+    {% if (page.image) %}
+    <div class="post_image"><img src="{{ page.image }}" /></div>
+    {% endif %}
+
+    <div class="post_content">{{ content }}</div>
+  </section>  
+</article>
